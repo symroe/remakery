@@ -24,3 +24,10 @@ def pip_install():
     with cd(env.depoy_path):
         with prefix('source env/bin/activate'):
             run("pip install -r requirements.txt")
+
+def syncdb():
+    with cd(env.depoy_path):
+        with prefix('source env/bin/activate'):
+            run("python manage.py syncdb")
+            run("python manage.py migrate")
+            
