@@ -12,7 +12,7 @@ def configure_nginx():
     update_from_git()
     config_file = "%s%s/nginx" % (env.depoy_path, env.config_path)
     sudo('cp -f %s /etc/nginx/sites-available/' % config_file)
-    sudo('ln -s /etc/nginx/sites-available/nginx /etc/nginx/sites-enabled/remakery')
+    sudo('ln -sf /etc/nginx/sites-available/nginx /etc/nginx/sites-enabled/remakery')
     service('nginx')
 
 def update_from_git():
