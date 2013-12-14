@@ -18,7 +18,7 @@ def configure_nginx():
 def configure_upstart():
     update_from_git()
     config_file = "%s%s/upstart" % (env.depoy_path, env.config_path)
-    sudo('cp -f %s /etc/init/' % config_file)
+    sudo('cp -f %s /etc/init/remakery.conf' % config_file)
     service('remakery')
 
 def update_from_git():

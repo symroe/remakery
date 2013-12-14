@@ -7,6 +7,6 @@ respawn
 console log
 setuid nobody
 setgid nogroup
-chdir /var/www/remakery
+chdir /var/www/remakery/
 
-exec /var/www/remakery/env/bin/gunicorn remakery:app
+exec /var/www/remakery/env/bin/gunicorn remakery.wsgi
