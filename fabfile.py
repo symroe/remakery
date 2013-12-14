@@ -20,6 +20,7 @@ def update_from_git():
         run("git pull origin master")
 
 def pip_install():
+    update_from_git()
     with cd(env.depoy_path):
         with prefix('source env/bin/activate'):
             run("pip install -r requirements.txt")
