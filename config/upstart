@@ -1,0 +1,12 @@
+description "remakery"
+
+start on (filesystem)
+stop on runlevel [016]
+
+respawn
+console log
+setuid nobody
+setgid nogroup
+chdir /var/www/remakery
+
+exec /var/www/remakery/env/bin/gunicorn remakery:app
