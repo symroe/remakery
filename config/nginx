@@ -4,7 +4,7 @@ upstream gunicorn {
 
 server {
     listen  80;
-    server_name    remakery.talusdesign.co.uk;
+    server_name remakery.talusdesign.co.uk;
 
     location / {
         proxy_set_header X-Real-IP $remote_addr;
