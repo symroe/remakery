@@ -1,0 +1,7 @@
+@import url('type.css');
+@import url('nav.css');
+
+body {
+    margin:0;
+    padding:0;
+}

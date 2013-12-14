@@ -1,0 +1,31 @@
+body > nav {
+    float:left;
+    position:fixed;
+    height:100%;
+    background-color:rgba(255,255,255,1);
+    min-width:80%;
+    -webkit-box-shadow: 2px -2px 5px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    2px -2px 5px rgba(50, 50, 50, 0.75);
+    box-shadow:         2px -2px 5px rgba(50, 50, 50, 0.75);
+}
+
+body > nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+body > nav ul li a {
+    display:block;
+    border-bottom:1px solid #EEE;
+    padding:0.5em 1em;
+    text-decoration:none;
+    color:#000;
+}
+
+/* todo aria selected? */
+body > nav ul li a.active {
+    background-color:#EEE;
+    font-weight:bold;
+}
+
